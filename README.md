@@ -1,1 +1,3 @@
 # File-encrypt-key-check
+
+This tool verifies if a file has been changed by creating a unique "signature" key based on its contents. To use it, first compile the code with `gcc -o checker main.c`. Use the **generate** command (`./checker -g file.txt signature.key`) to create a signature for your file. Later, use the **check** command (`./checker -c file.txt signature.key`) to compare the file against that signature; if the file has been altered, the program will alert you of the mismatch. It is a simple, educational way to track file integrity, though for serious security needs, industry-standard tools like SHA-256 are recommended.
