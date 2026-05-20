@@ -76,7 +76,7 @@ void generate_key(char *filename) {
         int j = 0;
         int count = 0;
         while (count < file_info.st_size) {
-            key[i][j] = *file_data_as_byte ^ key[i][j];
+            key[i][j] = (*file_data_as_byte) ^ key[i][j];
             file_data_as_byte++;
             j++;
             if(i == 32) {
